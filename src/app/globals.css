@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* PIOKA Brand Colors */
+  --primary-teal: #528387;
+  --dark-teal: #245F63;
+  --warm-cream: #F7F3E8;
+  --soft-white: #FFFDF8;
+  --orange-accent: #E68A3F;
+  --charcoal-text: #263638;
+  --light-border: #DDD8CA;
+  
+  /* Semantic Colors */
+  --background: var(--soft-white);
+  --foreground: var(--charcoal-text);
+  --primary: var(--primary-teal);
+  --primary-dark: var(--dark-teal);
+  --accent: var(--orange-accent);
+  --secondary: var(--warm-cream);
+  --border: var(--light-border);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-secondary: var(--secondary);
+  --color-border: var(--border);
+  --color-teal: var(--primary-teal);
+  --color-dark-teal: var(--dark-teal);
+  --color-warm-cream: var(--warm-cream);
+  --color-soft-white: var(--soft-white);
+  --color-orange: var(--orange-accent);
+  --color-charcoal: var(--charcoal-text);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
 }
